@@ -2,12 +2,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AnimalTastic</title>
+  <title>SuperHeroes</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
+  <div class="container">
 
+  <div id="buttonsAppearHere">
+    <button data-heroes="Superman">Superman</button>
+    <button data-heroes="Batman">Batman</button>
+    <button data-heroes="Captain America">Captain America</button>
+    <button data-heroes="Iron Man">Iron Man</button>
+    <button data-heroes="The Flash">The Flash</button>
+  </div>
+  
+  <form id="superheroesForm">
+      <label for="superheroes-input">Add a new Superheroes</label>
+      <input type="text" id="superheroes-input"><br>
+      <input id="addsuperheroes" type="submit" value="Submit">
+    </form>
+
+  <div id="gifsAppearHere"> 
+    </div>
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
 <script type="text/javascript" src="assets/javascript/app.js"> </script>
 </body>
