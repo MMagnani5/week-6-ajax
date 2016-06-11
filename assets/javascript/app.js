@@ -1,48 +1,44 @@
-$('#buttonsAppearHere').on('click', function(){
+
+
+
+$('#addsuperheroes').on('click', function(){
     var superheroesName = $('#superheroes-input').val().trim();
       console.log(superheroesName);
 
-
     var superheroesButton = $('<button>');
-    superheroesButton.addClass('superheroesButtonClass');
+    superheroesButton.addClass('heroes');
     superheroesButton.attr('data-heroes', superheroesName);
     superheroesButton.text(superheroesName);
-    $('#buttonsAppearHere ').append(superheroesButton);
+    $('#buttonsAppearHere').append(superheroesButton);
 
-  
-
-    return false;
-
-
+ return false;
 });
 
 
 
 
+$(document).on('click','.heroes',function() {
 
-
-$('button').on('click',function() {
-    $('#superheroesButton').removeClass('active');
-    $(this).addClass('active');
    
-   var p = $(this).data('heroes');
+   var input = $(this).data('heroes');
+   console.log(input);
+
     // Variable for giphy
-   var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + p + "&api_key=dc6zaTOxFJmzC&limit=10";
+   var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + input + "&api_key=dc6zaTOxFJmzC&limit=10";
 
     //request for giphy
    $.ajax({
                 url: queryURL,
                 method: 'GET'
             })
-            // recieving the response from the giphy
+            // receiving the response from the giphy
             .done(function(response) {
-            
+            $()
             // return the response
             var results = response.data;
             console.log(results)
 
-      for (var i = 0; i < results.length; i++){
-
+    for (var i = 0; i < results.length; i++){
 
         var gifDiv = $('<div class="item">')
 
@@ -59,13 +55,13 @@ $('button').on('click',function() {
 
         //
         $('#gifsAppearHere').prepend(gifDiv); 
+
     
     }
 
  
   });
-
-});                                                                                               
-
+return false;
+});      
 
  
