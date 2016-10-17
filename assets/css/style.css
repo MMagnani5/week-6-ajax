@@ -1,3 +1,8 @@
+body{
+   background-image: ("Superheroes.jpg");
+}
+
+
 #buttonsAppearHere{
   color:blue;
   margin-bottom: 20px;

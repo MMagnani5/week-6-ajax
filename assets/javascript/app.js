@@ -4,7 +4,8 @@
 $('#addsuperheroes').on('click', function(){
     var superheroesName = $('#superheroes-input').val().trim();
       console.log(superheroesName);
-
+  
+  
     var superheroesButton = $('<button>');
     superheroesButton.addClass('heroes');
     superheroesButton.attr('data-heroes', superheroesName);
@@ -24,11 +25,11 @@ $(document).on('click','.heroes',function() {
    console.log(input);
 
     // Variable for giphy
-   var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + input + "&api_key=dc6zaTOxFJmzC&limit=10";
+   var https = "http://api.giphy.com/v1/gifs/search?q=" + input + "&api_key=dc6zaTOxFJmzC&limit=10";
 
     //request for giphy
    $.ajax({
-                url: queryURL,
+                url: https,
                 method: 'GET'
             })
             // receiving the response from the giphy
