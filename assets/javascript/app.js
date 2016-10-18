@@ -1,4 +1,4 @@
-
+    
 
 
 $('#addsuperheroes').on('click', function(){
@@ -25,7 +25,7 @@ $(document).on('click','.heroes',function() {
    console.log(input);
 
     // Variable for giphy
-   var https = "http://api.giphy.com/v1/gifs/search?q=" + input + "&api_key=dc6zaTOxFJmzC&limit=10";
+   var https = "https://api.giphy.com/v1/gifs/search?q=" + input + "&api_key=dc6zaTOxFJmzC&limit=10";
 
     //request for giphy
    $.ajax({
